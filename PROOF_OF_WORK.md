@@ -1,6 +1,6 @@
 # Proof of Work
 
-Last updated: 2026-06-01
+Last updated: 2026-06-05
 Status: Active / Project-focused evidence map
 
 ## What This Demonstrates
@@ -26,7 +26,7 @@ Status: Active / Project-focused evidence map
 | Project status | Current state, recent progress, and open work across projects | Internal / Verified | [PROJECT_STATUS.md](PROJECT_STATUS.md) |
 | Project proof points | Concrete project portfolio: job-agent, PKM, household budget app | Internal / Verified | [PROJECT_PROOF_POINTS.md](PROJECT_PROOF_POINTS.md) |
 | Project timeline | Milestones across products and the portfolio evidence layer | Internal / Verified | [PROJECT_TIMELINE.md](PROJECT_TIMELINE.md) |
-| Weekly log | Execution cadence | Verified | [logs/WEEKLY_LOG.md](logs/WEEKLY_LOG.md) |
+| Weekly log | Execution cadence | Verified | [logs/WEEKLY_LOG.md](logs/WEEKLY_LOG.md), [logs/weekly-runs/2026-06-05-full-compiler-pass.md](logs/weekly-runs/2026-06-05-full-compiler-pass.md) |
 | Static demo portal | Published no-install click-through for job-agent, PKM, and household budget snapshots | Verified | [Published demo](https://theonedarkhorse.github.io/ai-native-proof-of-work-demo/), [demos/manifest.json](demos/manifest.json) |
 | Value proposition | Project-focused positioning | Hypothesis | [strategy/job-agent/product/VALUE_PROPOSITION.md](strategy/job-agent/product/VALUE_PROPOSITION.md) |
 | Architecture docs | Technical reasoning | Verified | [architecture/ARCHITECTURE.md](architecture/ARCHITECTURE.md) |
@@ -44,14 +44,15 @@ Status: Active / Project-focused evidence map
 | Strategy decisions | Implicit | Decision trail with tradeoffs | [logs/DECISION_LOG.md](logs/DECISION_LOG.md) |
 | Local project context | Rediscovered repeatedly | Indexed source map split by Codex projects, Claude projects, and shared agent assets | Internal source summaries created 2026-05-08 |
 | Project positioning | Automation/compiler was treated as the whole value prop | Concrete product projects are now the main proof points, with automation documented as the operating method | [PROJECT_PROOF_POINTS.md](PROJECT_PROOF_POINTS.md), [RECRUITER_BRIEF.md](RECRUITER_BRIEF.md), [strategy/job-agent/product/VALUE_PROPOSITION.md](strategy/job-agent/product/VALUE_PROPOSITION.md) |
-| Lead-project handoff | Recruiter-facing setup guidance could drift from the actual source repo | Weekly source verification now checks env files, compose, Makefile, package metadata, requirements, migrations, agent entrypoints, and startup-port/OAuth routing notes before promoting claims | [case-studies/JOB_AGENT_INSTALL_AND_HANDOFF.md](case-studies/JOB_AGENT_INSTALL_AND_HANDOFF.md), [logs/WEEKLY_LOG.md](logs/WEEKLY_LOG.md) |
+| Lead-project handoff | Recruiter-facing setup guidance could drift from the actual source repo | Weekly source verification checks env files, compose, Makefile, package metadata, requirements, migrations, agent entrypoints, startup-port/OAuth routing notes, and current source-repo commit evidence before promoting claims | [case-studies/JOB_AGENT_INSTALL_AND_HANDOFF.md](case-studies/JOB_AGENT_INSTALL_AND_HANDOFF.md), [logs/weekly-runs/2026-06-05-full-compiler-pass.md](logs/weekly-runs/2026-06-05-full-compiler-pass.md) |
+| Career context reuse | User-owned career documents were uploaded and used mainly as static source material | Job-agent now has preview-first personal-context mining that extracts reusable, source-attributed facts into snippets/persona/experience material and feeds approved mined context into CV generation | `TheOneDarkHorse/job-agent` commits `3b155e3`, `0b7a66e`, `c6f4afc`, `891f821` |
 
 ## Best Current Proof Points
 
 ### 1. Job-agent career workflow product
 
 - What was done: Built and documented a career workflow product covering CV, job discovery, application support, feedback, privacy, QA, deployment, telemetry, and billing planning.
-- Current status: Local project status marks MVP and career-ops tasks complete; source-repo status docs updated on 2026-05-26 add shipped nav integration, Windows local validation recovery, startup/LLM handoff notes, and remaining production/legal blockers.
+- Current status: Local project status marks MVP and career-ops tasks complete. Source-repo commits from 2026-06-03 to 2026-06-05 add personal-context mining, request-size guardrails, duplicate-detection robustness, migration/head documentation refresh, and an inline rewrite editor backlog item.
 - Why it matters: Shows practical full-stack product execution in a domain directly related to job search, recruiter workflows, and AI-assisted career operations.
 - Status: Internal / Verified.
 - Evidence link: [PROJECT_PROOF_POINTS.md](PROJECT_PROOF_POINTS.md), [SOURCE_MAP.md](SOURCE_MAP.md)
@@ -62,7 +63,7 @@ Status: Active / Project-focused evidence map
 ### 2. PKM product and knowledge workflow system
 
 - What was done: Maintained a personal knowledge-management project with ingestion, search, learning/feed surfaces, browser extension material, tests, and feature lifecycle workflow.
-- Current status: Feature workflow and core surfaces are represented; social feed is marked done in the local feature queue; full daily-use readiness still depends on operational setup and verification.
+- Current status: Feature workflow and core surfaces are represented; social feed is marked done in the local feature queue; full daily-use readiness still depends on operational setup and verification. No new source-repo commits were found in the 2026-06-01 to 2026-06-05 connector scan.
 - Why it matters: Shows information architecture, source ingestion, knowledge workflows, and structured prioritization.
 - Status: Internal / Verified.
 - Evidence link: [PROJECT_PROOF_POINTS.md](PROJECT_PROOF_POINTS.md), [SOURCE_MAP.md](SOURCE_MAP.md)
@@ -72,7 +73,7 @@ Status: Active / Project-focused evidence map
 ### 3. Household budget app
 
 - What was done: Designed and implemented a household budgeting product with shared household modeling, imports, transaction review, forecasting, goals, security/RLS concerns, and broad test coverage.
-- Current status: Core surfaces and household/shared-account hardening are active; recent work extracts read models, view models, workflows, and mutations while migration cleanup remains open.
+- Current status: Core surfaces and household/shared-account hardening are active; recent work extracts read models, view models, workflows, and mutations while migration cleanup remains open. No new source-repo commits were found in the 2026-06-01 to 2026-06-05 connector scan.
 - Why it matters: Shows domain modeling, financial-product UX, and security-aware application design.
 - Status: Internal / Verified.
 - Evidence link: [PROJECT_PROOF_POINTS.md](PROJECT_PROOF_POINTS.md), [SOURCE_MAP.md](SOURCE_MAP.md)
@@ -118,8 +119,10 @@ Status: Active / Project-focused evidence map
 | Claim | Status | Missing Evidence |
 |---|---|---|
 | Job-agent is MVP-complete | Internal / Verified | Add recruiter-safe excerpt or commit evidence if this claim will be shared outside the private repo |
+| Personal-context mining has landed in job-agent | Verified | Commit evidence exists; production/user impact is still unmeasured |
+| Latest job-agent head passed CI/test suite | Needs Review | Connector found Vercel `success` on `891f821`, but no GitHub workflow runs and no full test output were inspected in this pass |
 | PKM and household budget app are strong supporting projects | Internal / Verified | Add sanitized project case-study pages or selected commits/tests |
 | Weekly workflow improvement has measurable impact | Estimated / not directly tracked | Time saved, reuse count, or before/after workflow data |
 | Recruiter assets improve response or interview quality | Hypothesis | Recruiter feedback, interview outcomes, or sharing results |
 | Static demo portal publication | Verified | Published through separate public repo [TheOneDarkHorse/ai-native-proof-of-work-demo](https://github.com/TheOneDarkHorse/ai-native-proof-of-work-demo) and smoke-tested live |
-| Latest product progress after 2026-05-31 | Needs Review | Add a dated weekly-input file or source-verified product commits before promoting new claims |
+| PKM / household-budget progress after 2026-06-01 | Needs Review | No new commits surfaced in the connector scan across the requested support repos |
