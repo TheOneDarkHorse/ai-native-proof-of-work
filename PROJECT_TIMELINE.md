@@ -1,6 +1,6 @@
 # Project Timeline
 
-Last updated: 2026-06-01
+Last updated: 2026-06-05
 Status: Active / Living milestone log
 
 ## Purpose
@@ -25,8 +25,10 @@ flowchart TD
     M10["2026-05-28<br/>Static demo<br/>portal"]
     M11["2026-06-01<br/>Manual compiler<br/>run-now audit"]
     M12["2026-06-01<br/>Public demo<br/>published"]
+    M13["2026-06-04<br/>Job-agent personal<br/>context mining"]
+    M14["2026-06-05<br/>Source-verified<br/>compiler branch"]
 
-    M1 --> M2 --> M3 --> M4 --> M5 --> M6 --> M7 --> M8 --> M9 --> M10 --> M11 --> M12
+    M1 --> M2 --> M3 --> M4 --> M5 --> M6 --> M7 --> M8 --> M9 --> M10 --> M11 --> M12 --> M13 --> M14
 ```
 
 ## Milestone Log
@@ -49,6 +51,8 @@ flowchart TD
 | 2026-05-28 to 2026-05-31 | Static clickable demo portal added and committed | Portfolio evidence layer | Verified | [demos/index.html](demos/index.html), [demos/manifest.json](demos/manifest.json), commit `1e9511c` | Created the no-install product snapshot that was later published through the separate public demo repo |
 | 2026-06-01 | Manual run-now audit of the scheduled compiler contract refreshed stale entry points and internal source index freshness | Portfolio operating layer | Verified | [logs/WEEKLY_LOG.md](logs/WEEKLY_LOG.md), [SOURCE_MAP.md](SOURCE_MAP.md), internal source index metadata | Confirms the scheduled task exists and closes navigation/status drift noted during review |
 | 2026-06-01 | Public demo portal published through a separate public repository | Portfolio evidence layer | Verified | [Published demo](https://theonedarkhorse.github.io/ai-native-proof-of-work-demo/), [public demo repo](https://github.com/TheOneDarkHorse/ai-native-proof-of-work-demo) | Lets recruiters click through product snapshots without exposing the private evidence repository |
+| 2026-06-04 | Personal-context mining lands in job-agent | Job-agent | Verified | `TheOneDarkHorse/job-agent` commits `3b155e3`, `0b7a66e`, `c6f4afc`, `891f821` | Shows product work beyond generation: user-owned career documents become previewed, source-attributed, reusable context for CVs, letters, interview prep, and persona material |
+| 2026-06-05 | Branch-based compiler pass updates proof-of-work summaries from GitHub source evidence | Portfolio evidence layer | Verified | [logs/weekly-runs/2026-06-05-full-compiler-pass.md](logs/weekly-runs/2026-06-05-full-compiler-pass.md) | Shows claim-quality control: source commits were inspected, unsupported test/user-impact claims stayed marked as needing evidence |
 
 ## How To Maintain This
 
